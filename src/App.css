@@ -2,7 +2,6 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .logo {
@@ -39,4 +38,24 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.searchBar {
+  margin: 0 0 15px 0;
+}
+.input {
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 25px;
+  padding: 0 15px;
+}
+
+.searchList {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+p {
+  margin: 0;
 }
