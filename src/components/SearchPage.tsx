@@ -17,6 +17,10 @@ const SearchPage = () => {
         }
     };
 
+    const handleSuggestionClick = (suggestion: string) => {
+        console.log('Selected suggestion:', suggestion);
+    };
+
     return (
         <div>
             <form className="searchBar">
@@ -28,7 +32,7 @@ const SearchPage = () => {
                 />
             </form>
 
-            <ShowList suggestions={suggestions} />
+            <ShowList suggestions={suggestions} handleSuggestionClick={handleSuggestionClick}  />
         </div>
     );
 };
