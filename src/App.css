@@ -59,3 +59,20 @@
 p {
   margin: 0;
 }
+
+.detailsContainer {
+  display: flex;
+}
+
+.detailsText {
+  margin-left: 20px;
+}
+
+.detailsText h1 {
+  margin: 0 0 20px 0;
+}
+
+.detailsImg img {
+  width: 200px;
+  height: auto;
+}
