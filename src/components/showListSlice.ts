@@ -15,7 +15,10 @@ export const fetchSuggestions = createAsyncThunk(
     'shows/fetchSuggestions',
     async (value: string) => {
         const response = await axios.get(`http://api.tvmaze.com/search/shows?q=${value}`);
-        const data = response.data.map((item: any) => item.show.name);
+        const data = response.data.map((item: any) => ({
+            id: item.show.id.toString(),
+            name: item.show.name,
+        }));
         return data;
     }
 );
