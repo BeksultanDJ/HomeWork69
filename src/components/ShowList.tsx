@@ -7,11 +7,11 @@ interface ShowListProps {
 
 const ShowList: React.FC<ShowListProps> = ({ suggestions}) => {
     return (
-        <div>
+        <div className="searchList">
             {suggestions.map((item, index) => (
-                <div key={index} >
+                <p key={index} >
                     {item}
-                </div>
+                </p>
             ))}
         </div>
     );
