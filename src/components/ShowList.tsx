@@ -1,21 +1,20 @@
 import React from 'react';
 
 interface ShowListProps {
-    suggestions: string[];
-    handleSuggestionClick: (suggestion: string) => void;
+    suggestions: { id: string; name: string }[];
+    handleSuggestionClick: (suggestion: string, id: string) => void;
 }
 
 const ShowList: React.FC<ShowListProps> = ({ suggestions, handleSuggestionClick }) => {
-
     if (!suggestions || suggestions.length === 0) {
-        return null;
+        return <div>No suggestions found.</div>;
     }
 
     return (
         <div className="searchList">
-            {suggestions.map((item, index) => (
-                <p key={index} onClick={() => handleSuggestionClick(item)}>
-                    {item}
+            {suggestions.map((item) => (
+                <p key={item.id} onClick={() => handleSuggestionClick(item.name, item.id)}>
+                    {item.name}
                 </p>
             ))}
         </div>

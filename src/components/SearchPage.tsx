@@ -19,9 +19,9 @@ const SearchPage = () => {
         }
     };
 
-    const handleSuggestionClick = (suggestion: string) => {
-        console.log('Selected suggestion:', suggestion);
-        navigate(`/shows/${suggestion}`);
+    const handleSuggestionClick = (suggestion: string, id: string) => {
+        console.log('Selected suggestion:', suggestion, id);
+        navigate(`/shows/${id}`);
     };
 
     return (
